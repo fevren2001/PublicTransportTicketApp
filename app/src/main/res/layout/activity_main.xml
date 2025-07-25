@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A1A1A"
@@ -120,144 +120,32 @@
 
     </LinearLayout>
 
-    <!-- Country Pass Card -->
+
+
+    <!-- TICKETS SECTION - This is where tickets should be displayed -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_background_dark"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_marginHorizontal="16dp">
 
+        <!-- Section header with scan QR button -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="12dp">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_card"
-                android:tint="#FFFFFF"
-                android:layout_marginEnd="12dp" />
-
-            <LinearLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Transport Ticket"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="€10.00 - 24hr validity"
-                        android:textColor="#9E9E9E"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_share"
-                    android:tint="#FFFFFF"
-                    android:layout_marginEnd="8dp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_more"
-                    android:tint="#FFFFFF" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Validity Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/ticketStatusBadge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_green_background"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp"
-                android:text="No Ticket"
+                android:text="Your Tickets"
                 android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BKK ⓘ"
-                android:textColor="#9E9E9E"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Valid until:"
-                    android:textColor="#9E9E9E"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/validUntilText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Purchase a ticket"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="4dp" />
-
-            </LinearLayout>
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical" />
 
             <LinearLayout
                 android:id="@+id/readTicketButton"
@@ -289,14 +177,35 @@
 
         </LinearLayout>
 
+        <!-- RecyclerView for tickets - NOW IN THE CORRECT LOCATION -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ticketsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+
+        <!-- No tickets message -->
+        <TextView
+            android:id="@+id/noTicketsText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="No tickets found"
+            android:textColor="#9E9E9E"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
     </LinearLayout>
 
     <!-- Scanned QR Code Information Display -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginHorizontal="16dp">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/scannedInfoTextView"
@@ -422,22 +331,6 @@
                 android:layout_marginTop="2dp" />
 
         </LinearLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ticketsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="16dp" />
-
-        <TextView
-            android:id="@+id/noTicketsText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No tickets found"
-            android:textColor="#9E9E9E"
-            android:textAlignment="center"
-            android:layout_margin="32dp"
-            android:visibility="gone" />
 
     </LinearLayout>
 

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#2A2A2A">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ticket Price: €10.00"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Card Number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="#9E9E9E"
+        app:boxBackgroundColor="#3A3A3A"
+        app:boxStrokeColor="#6200EA"
+        app:hintTextColor="#9E9E9E"
+        app:errorTextColor="#F44336">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number (15 digits)"
+            android:inputType="number"
+            android:maxLength="18"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Row for Expiry and CVV -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/expiryLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:textColorHint="#9E9E9E"
+            app:boxBackgroundColor="#3A3A3A"
+            app:boxStrokeColor="#6200EA"
+            app:hintTextColor="#9E9E9E"
+            app:errorTextColor="#F44336">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expiryInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="MM/YY"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cvvLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textColorHint="#9E9E9E"
+            app:boxBackgroundColor="#3A3A3A"
+            app:boxStrokeColor="#6200EA"
+            app:hintTextColor="#9E9E9E"
+            app:errorTextColor="#F44336">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cvvInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CVV (4 digits)"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Card Holder Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardHolderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="#9E9E9E"
+        app:boxBackgroundColor="#3A3A3A"
+        app:boxStrokeColor="#6200EA"
+        app:hintTextColor="#9E9E9E"
+        app:errorTextColor="#F44336">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardHolderInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Holder Name"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Security Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@drawable/rounded_background_info">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_lock"
+            android:tint="#4CAF50"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your payment information is encrypted and secure"
+            android:textColor="#9E9E9E"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

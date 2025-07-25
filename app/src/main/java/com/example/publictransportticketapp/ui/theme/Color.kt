@@ -1,4 +1,4 @@
-package com.example.publictransportticketapp.ui.theme
+package com.fatih.publictransportticketapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

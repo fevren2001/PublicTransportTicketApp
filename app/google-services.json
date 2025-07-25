@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "42471723234",
+    "project_id": "creditcardapp-4fb8c",
+    "storage_bucket": "creditcardapp-4fb8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42471723234:android:cd7c7c5663d44a1d318ebb",
+        "android_client_info": {
+          "package_name": "com.fatih.publicTransportTicketApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMdrnnxXHJ6R1pdv8wzWfFG3qCR138f48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42471723234:android:4b64102cb5b18228318ebb",
+        "android_client_info": {
+          "package_name": "com.fatih.publictransportticketapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMdrnnxXHJ6R1pdv8wzWfFG3qCR138f48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

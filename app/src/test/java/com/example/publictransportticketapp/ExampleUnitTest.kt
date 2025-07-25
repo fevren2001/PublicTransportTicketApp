@@ -1,4 +1,4 @@
-package com.example.publictransportticketapp
+package com.fatih.publictransportticketapp
 
 import org.junit.Test
 

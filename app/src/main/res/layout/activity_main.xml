@@ -152,7 +152,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Country Pass Discounted"
+                    android:text="Transport Ticket"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -166,16 +166,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Details"
+                        android:text="€10.00 - 24hr validity"
                         android:textColor="#9E9E9E"
                         android:textSize="14sp" />
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/ic_arrow_right"
-                        android:tint="#9E9E9E"
-                        android:layout_marginStart="4dp" />
 
                 </LinearLayout>
 
@@ -211,12 +204,13 @@
             android:layout_marginBottom="16dp">
 
             <TextView
+                android:id="@+id/ticketStatusBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_green_background"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="6dp"
-                android:text="Valid"
+                android:text="No Ticket"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -254,9 +248,10 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/validUntilText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="August 23, 2025"
+                    android:text="Purchase a ticket"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -324,7 +319,7 @@
         android:layout_height="56dp"
         android:layout_margin="16dp"
         android:background="@drawable/rounded_background_purple"
-        android:text="Purchase"
+        android:text="Purchase New Ticket"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -427,6 +422,22 @@
                 android:layout_marginTop="2dp" />
 
         </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ticketsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp" />
+
+        <TextView
+            android:id="@+id/noTicketsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No tickets found"
+            android:textColor="#9E9E9E"
+            android:textAlignment="center"
+            android:layout_margin="32dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 

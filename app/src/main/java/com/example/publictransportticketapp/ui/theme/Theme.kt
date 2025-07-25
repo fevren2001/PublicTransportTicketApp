@@ -1,4 +1,4 @@
-package com.example.publictransportticketapp.ui.theme
+package com.fatih.publictransportticketapp.ui.theme
 
 import android.app.Activity
 import android.os.Build
